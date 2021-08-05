@@ -14,9 +14,9 @@ This is a simple linkedlist with the following methods:
 		- removeLast()
 			* Time complexity O(n)
 		- insertAt(index:int, value:int)
-				* Time complexity O(n)
+			* Time complexity O(n)
 		- print()
-				* Time complexity O(n)
+			* Time complexity O(n)
 
 */
 
