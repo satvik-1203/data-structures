@@ -5,18 +5,18 @@ Title: LinkedList
 
 This is a simple linkedlist with the following methods: 
 
-																		- addFirst(value: int) 
-																						* Time complexity O(1)
-																		- addLast(value: int)
-																						* Time complexity O(1)
-																		- removeFirst()
-																						* Time complexity O(1)
-																		- removeLast()
-																		 				 * Time complexity O(n)
-																		- insertAt(index:int, value:int)
-																							* Time complexity O(n)
-																		- print()
-																							* Time complexity O(n)
+		- addFirst(value: int) 
+			* Time complexity O(1)
+		- addLast(value: int)
+			* Time complexity O(1)
+		- removeFirst()
+			* Time complexity O(1)
+		- removeLast()
+			* Time complexity O(n)
+		- insertAt(index:int, value:int)
+				* Time complexity O(n)
+		- print()
+				* Time complexity O(n)
 
 */
 
