@@ -1,11 +1,14 @@
+import java.util.LinkedList;
+import java.util.List;
+
 // Binary search tree
 // left smaller than right and parent. 
 
 /* 
 
-    9 -> parent
-	/   \
-  8		10 -> siblings (left smaller than right and parent)
+     9 -> parent
+    /  \
+   8	10 -> siblings (left smaller than right and parent)
 
 */
 public class Tree {
@@ -90,8 +93,37 @@ public class Tree {
 		return (1 + Math.max(height(node.right), height(node.left)));
 	}
 
-	private Node findMin(Node node) {
+	// Find min value in the tree
 
-		return new Node(10);
+	public int findMin() {
+
+		return findMin(root);
+	}
+
+	private int findMin(Node node) {
+		if (node == null)
+			return 0;
+		if (node.left == null)
+			return node.value;
+
+		return findMin(node.left);
+	}
+
+	public List<Integer> kDistance(int k) {
+		var nodes = new LinkedList<Integer>();
+		return kDistance(root, k, 0, nodes);
+	}
+
+	public List<Integer> kDistance(Node node, int k, int currentDistance, List<Integer> nodes) {
+		if (node == null)
+			return null;
+
+		if (currentDistance == k)
+			nodes.add(node.value);
+
+		kDistance(node.left, k, currentDistance + 1, nodes);
+		kDistance(node.right, k, currentDistance + 1, nodes);
+
+		return nodes;
 	}
 }

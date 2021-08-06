@@ -17,9 +17,9 @@ public class main {
 		var tree = new Tree();
 		tree.insert(10);
 		tree.insert(9);
-		tree.insert(9);
+		tree.insert(8);
 		tree.insert(11);
 		tree.insert(12);
-		System.out.println(tree.height());
+		System.out.println(tree.kDistance(2).toString());
 	}
 }
